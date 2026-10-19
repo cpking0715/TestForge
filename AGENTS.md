@@ -2,7 +2,7 @@
 
 ## 一句话产品
 
-自用/内部一站式测试平台：测试管理 + 接口/UI/APP 自动化 + AI 辅助 + CI。对标 ntesterc 类产品的功能逻辑（规格见 `docs/DEV-SPEC.md`），UI/文案全部自研。不做 SaaS/多租户/插件市场。
+自用/内部一站式测试平台：测试管理 + 接口/UI/APP 自动化 + AI 辅助 + CI。功能需求的唯一完整来源是 `docs/PRD.md`，UI/文案全部自研。不做 SaaS/多租户/插件市场。
 
 ## 技术栈实例化
 
@@ -43,6 +43,9 @@ docker compose -f deploy/docker-compose.yml up -d
 - 后端模型不用 PG 专有列类型（测试要跑 SQLite）；需要 JSON 用 `sa.JSON`
 - 用户可见文案中文；提交信息中文，走 `git_commit` 工具
 
-## 侦查案卷
+## 文档索引（开工必读顺序）
 
-对标产品补充侦查走 reverse-skills case 案卷（`~/.agents/reverse-skills/work/testforge-recon/`），只读、授权范围内。
+1. `docs/PRD.md` —— 全部功能需求（模块/接口语义/非功能）
+2. `docs/ROADMAP.md` —— P0-P8 施工图、当前进度、每阶段门禁
+3. `docs/DEV-SPEC.md` —— 范围边界与验收总口径
+4. `docs/adr/` —— 已拍板的技术决策，改前先读

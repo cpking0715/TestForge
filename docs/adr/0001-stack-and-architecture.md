@@ -4,7 +4,7 @@
 
 ## 背景
 
-TestForge 为全量复刻对标产品功能的新建项目，需确定技术栈与仓库架构。对标产品实测栈：React 19 + Vite + TailwindCSS 前端；Python 3.12 后端（FastAPI 特征）+ nginx + Redis +（外置 RAGFlow）。
+TestForge 为按 PRD 全量实现的新建项目，需确定技术栈与仓库架构。参考栈（调研结论）：React 19 + Vite + TailwindCSS 前端；Python 后端（FastAPI）+ nginx + Redis。
 
 ## 决策
 
