@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: testforge-pg
+    environment:
+      POSTGRES_USER: testforge
+      POSTGRES_PASSWORD: testforge
+      POSTGRES_DB: testforge
+    ports:
+      - "5432:5432"
+    volumes:
+      - testforge-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U testforge"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: testforge-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - testforge-redisdata:/data
+
+volumes:
+  testforge-pgdata:
+  testforge-redisdata:

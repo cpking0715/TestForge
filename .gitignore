@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+*.local
+
+# 环境与凭据
+.env
+.env.*
+!.env.example
+
+# 工具
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 数据
+*.db
+*.sqlite3
